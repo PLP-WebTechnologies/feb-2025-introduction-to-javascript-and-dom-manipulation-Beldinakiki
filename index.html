@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">DOM Manipulation Demo</h1>
+        <p id="subtitle">Learn how to interact with web pages using JavaScript</p>
+    </header>
+    
+    <main class="container">
+        <section class="card" id="text-manipulation">
+            <h2>Text Content Manipulation</h2>
+            <p id="changeable-text">This text will change when you click the button below.</p>
+            <button id="change-text-btn">Change Text</button>
+        </section>
+        
+        <section class="card" id="style-manipulation">
+            <h2>Style Manipulation</h2>
+            <p id="style-target">This paragraph's style will change when you click the button.</p>
+            <button id="style-btn">Toggle Highlight</button>
+        </section>
+        
+        <section class="card" id="element-manipulation">
+            <h2>Element Manipulation</h2>
+            <div id="element-container">
+                <p>Click the buttons to add or remove elements.</p>
+            </div>
+            <div class="button-group">
+                <button id="add-element-btn">Add Element</button>
+                <button id="remove-element-btn">Remove Last Element</button>
+            </div>
+        </section>
+        
+        <section class="card" id="event-section">
+            <h2>Event Listeners</h2>
+            <p>Move your mouse over this section to see the background change.</p>
+            <button id="click-counter-btn">Click Me!</button>
+            <p>Click count: <span id="click-count">0</span></p>
+        </section>
+    </main>
+    
+    <footer id="page-footer">
+        <p>Created with JavaScript DOM Manipulation</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
